@@ -2,7 +2,7 @@
 	<head>
 		<title>Ricerca</title>
 		<script>
-			/*function controllo_campi()
+			function controllo_campi()
 			{
 				var n=document.getElementById("nelementi").value;
 				var c=document.getElementById("citta").value;
@@ -13,7 +13,7 @@
 					if(parseInt(n)<51)
 						esito=true;
 				return esito;
-			}*/
+			}
 		</script>
 	</head>
 	<body>
@@ -75,11 +75,11 @@
 			//CHIUDO IL CURL
 			curl_close($chiamata);
 			
-			echo "<form id='forma' method='post'><br/>";
+			echo "<form id='forma' method='post' onsubmit='controllo_campi()'><br/>";
 				echo "INSERIMENTO DATI\n";
-				echo "Seleziona il numero elementi:<input type='text' value='$nelementi' name='nelementi'id='nelementi'/>";
-				echo "Citta:<input type='text' value='$citta' name='citta' id='citta' />";
-				echo "Cosa stai cercando?<input type='text' value='$ricerca' name='ricerca' id='ricerca'/><br/>";
+				echo "<p>Seleziona il numero elementi:<input type='text' value='$nelementi' name='nelementi'id='nelementi'/></p>";
+				echo "<p>Citta:<input type='text' value='$citta' name='citta' id='citta'/></p>";
+				echo "<p>Cosa stai cercando?<input type='text' value='$ricerca' name='ricerca' id='ricerca'/></p>";
 				echo "<input type='submit' value='Aggiorna tabella'/>";
 			echo "</form>"
 		?>
