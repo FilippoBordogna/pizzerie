@@ -77,8 +77,8 @@
 			
 			echo "<div align='Center'>";
 			echo "<form id='forma' method='post' /*onsubmit='return controllo_campi();'*/><br/>";
-			echo "<h1>INSERIMENTO DATI\n";
-			echo "<p>Seleziona il numero elementi:</td><td><input type='number' placeholder='Da 1 a 50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi' /></p>";
+			echo "<h1>INSERIMENTO DATI\n</h1>";
+			echo "<p>Seleziona il numero elementi:</td><td><input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi' /></p>";
 			echo "<p>Citta: </td><td><input type='text' placeholder='Bergamo, Milano, Berlino, etc' value='$citta' name='citta' id='citta' /></p>";
 			echo "<p>Cosa stai cercando?</td><td><input type='text' placeholder='Ristorante, Pizzeria, Bar' value='$ricerca' name='ricerca' id='ricerca' /></p><br/>";
 			echo " <input type='submit' value='Aggiorna tabella' />";
