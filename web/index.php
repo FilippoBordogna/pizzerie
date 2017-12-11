@@ -58,13 +58,13 @@
 				for($i=0; $i<$nelementi; $i++)
 				{
 					echo ("<tr>");
-						echo ("<td style='border: 1px solid black;>");
+						echo ("<td style='border: 1px solid black;'>");
 						echo ($risposta->response->venues[$i]->name);
 						echo ("</td>");
-						echo ("<td style='border: 1px solid black;>");
+						echo ("<td style='border: 1px solid black;'>");
 						echo ($risposta->response->venues[$i]->location->lat);
 						echo ("</td>");
-						echo ("<td style='border: 1px solid black;>");
+						echo ("<td style='border: 1px solid black;'>");
 						echo ($risposta->response->venues[$i]->location->lng);
 						echo ("</td>");
 					echo ("</tr>");
