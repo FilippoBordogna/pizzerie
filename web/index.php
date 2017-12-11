@@ -10,8 +10,7 @@
 				var esito=false;
 				var verifica=/^\d{1,2}$/
 				if(n!=""&&c!=""&&document.getElementById("ricerca").value!="")
-					if(parseInt(n)<51)
-						esito=true;
+					esito=true;
 				if(!esito)
 					echo ("alert('Errore nell'inserimento:\n I campi NON possono essere vuoti\n');");
 				return esito;
@@ -59,13 +58,13 @@
 				for($i=0; $i<$nelementi; $i++)
 				{
 					echo ("<tr>");
-						echo ("<td style='border: 1px solid black;>");
+						echo ("<td style='border: 1px solid black;'>");
 						echo ($risposta->response->venues[$i]->name);
 						echo ("</td>");
-						echo ("<td style='border: 1px solid black;>");
+						echo ("<td style='border: 1px solid black;'>");
 						echo ($risposta->response->venues[$i]->location->lat);
 						echo ("</td>");
-						echo ("<td style='border: 1px solid black;>");
+						echo ("<td style='border: 1px solid black;'>");
 						echo ($risposta->response->venues[$i]->location->lng);
 						echo ("</td>");
 					echo ("</tr>");
