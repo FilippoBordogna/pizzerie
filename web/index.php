@@ -49,7 +49,7 @@
 			
 		    // DECODIFICO LA RISPOSTA IN JSON SALAVANDOLA NELLA VARIABILE $risposta
 			$risposta = json_decode($risposta_json);
-			# Stampa della tabella delle pizzerie.
+				echo "<h1 style='color:red; font-family:courier; font-weight:bold;'>RISULTATI:</h1>";
 				echo "<table align='center' style='border:3px solid black'>";
 				echo "<tr>";
 					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;'>NOME (".$ricerca.")</th>");
@@ -77,7 +77,7 @@
 			//CHIUDO IL CURL
 			curl_close($chiamata);
 			
-			echo "<div align='center' style='font-family:Courier;  font-weight:bold;'>";
+			echo "<div align='center' style='font-family:Courier;  font-weight:bold; border: solid 2px black;'>";
 			echo "<form id='forma' method='post' onsubmit='controllo_campi()'><br/>";
 				echo "<h1 style='color:red;'>INSERIMENTO DATI</h1>";
 				echo "<p>Seleziona il numero elementi: <input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi'/></p>";
