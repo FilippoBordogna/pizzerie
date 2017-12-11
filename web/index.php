@@ -59,13 +59,13 @@
 				for($i=0; $i<$nelementi; $i++)
 				{
 					echo ("<tr>");
-						echo ("<td>");
+						echo ("<td style='border: 1px solid black'>");
 						echo ($risposta->response->venues[$i]->name);
 						echo ("</td>");
-						echo ("<td>");
+						echo ("<td style='border: 1px solid black'>");
 						echo ($risposta->response->venues[$i]->location->lat);
 						echo ("</td>");
-						echo ("<td>");
+						echo ("<td style='border: 1px solid black'>");
 						echo ($risposta->response->venues[$i]->location->lng);
 						echo ("</td>");
 					echo ("</tr>");
@@ -77,9 +77,9 @@
 			//CHIUDO IL CURL
 			curl_close($chiamata);
 			
-			echo "<div align='center' style='font-family:Courier;'>";
+			echo "<div align='center' style='font-family:Courier;  font-weight:bold;'>";
 			echo "<form id='forma' method='post' onsubmit='controllo_campi()'><br/>";
-				echo "<h1 style='color:red; font-weight:bold;'>INSERIMENTO DATI</h1>";
+				echo "<h1 style='color:red;'>INSERIMENTO DATI</h1>";
 				echo "<p>Seleziona il numero elementi: <input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi'/></p>";
 				echo "<p>Citta: <input type='text' placeholder='Bergamo, Milano, etc'value='$citta' name='citta' id='citta'/></p>";
 				echo "<p>Cosa stai cercando? <input type='text' placeholder='Ristorante, Pizzeria, etc' value='$ricerca' name='ricerca' id='ricerca'/></p>";
