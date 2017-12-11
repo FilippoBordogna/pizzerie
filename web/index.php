@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Ricerca</title>
+		<title>Ricerca API Bordogna</title>
 		<script>
 			function controllo_campi()
 			{
