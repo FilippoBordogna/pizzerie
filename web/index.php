@@ -2,7 +2,7 @@
 	<head>
 		<title>Ricerca</title>
 		<script>
-			function controllo_campi()
+			/*function controllo_campi()
 			{
 				var n=document.getElementById("nelementi").value;
 				var c=document.getElementById("citta").value;
@@ -13,7 +13,7 @@
 					if(parseInt(n)<51)
 						esito=true;
 				return esito;
-			}
+			}*/
 		</script>
 	</head>
 	<body>
@@ -77,7 +77,7 @@
 			curl_close($chiamata);
 			
 			echo "<div style:'text-align:center; border: solid 2px black;'>";
-			echo "<form id='forma' method='post' onsubmit='return controllo_campi();'><br/>";
+			echo "<form id='forma' method='post' /*onsubmit='return controllo_campi();'*/><br/>";
 			echo "<h1 style='font-family:courier; font-weight:bold; color:red;'>INSERIMENTO DATI\n</h1>";
 			echo "<p>Seleziona il numero elementi:</td><td><input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi' /></p>";
 			echo "<p>Citta: </td><td><input type='text' placeholder='Bergamo, Milano, etc' value='$citta' name='citta' id='citta' /></p>";
