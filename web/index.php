@@ -17,7 +17,7 @@
 		</script>
 	</head>
 	<body>
-		<?php
+		<? php 
 			
 			$nelementi=10;
 			$citta="Bergamo";
@@ -48,23 +48,22 @@
 		    // DECODIFICO LA RISPOSTA IN JSON SALAVANDOLA NELLA VARIABILE $risposta
 			$risposta = json_decode($risposta_json);
 			# Stampa della tabella delle pizzerie.
-			echo ("<div align='center'>");
-			echo ("<table align='center'>");
-				echo "<tr>";
+			
+				echo ("<tr>");
 					echo ("<th>NOME (".$ricerca.")</th>");
 					echo ("<th>LATITUDINE</th>");
 					echo ("<th>LONGITUDINE</th>");
-				echo "</tr>";
+				echo ("</tr>");
 				for($i=0; $i<$nelementi; $i++)
 				{
 					echo ("<tr>");
-						echo ("<td style='border: 1px solid black;'>");
+						echo ("<td>");
 						echo ($risposta->response->venues[$i]->name);
 						echo ("</td>");
-						echo ("<td style='border: 1px solid black;'>");
+						echo ("<td>");
 						echo ($risposta->response->venues[$i]->location->lat);
 						echo ("</td>");
-						echo ("<td style='border: 1px solid black;'>");
+						echo ("<td>");
 						echo ($risposta->response->venues[$i]->location->lng);
 						echo ("</td>");
 					echo ("</tr>");
@@ -76,14 +75,13 @@
 			//CHIUDO IL CURL
 			curl_close($chiamata);
 			
-			echo "<div style:'text-align:center; border: solid 2px black;'>";
-			echo "<form id='forma' method='post' /*onsubmit='return controllo_campi();'*/><br/>";
-			echo "<h1 style='font-family:courier; font-weight:bold; color:red;'>INSERIMENTO DATI\n</h1>";
-			echo "<p>Seleziona il numero elementi:<input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi' /></p>";
-			echo "<p>Citta:<input type='text' placeholder='Bergamo, Milano, etc' value='$citta' name='citta' id='citta' /></p>";
-			echo "</form>";
-			echo "<p>Cosa stai cercando?<input type='text' placeholder='Ristorante, Pizzeria, Bar' value='$ricerca' name='ricerca' id='ricerca' /></p><br/>";
-			echo "<input type='submit' value='Aggiorna tabella'/>";
+			echo ("<form id='forma' method='post'><br/>");
+				echo ("INSERIMENTO DATI\n");
+				echo ("Seleziona il numero elementi:<input type='text' value='$nelementi' name='nelementi'id='nelementi'/>");
+				echo ("Citta:<input type='text' value='$citta' name='citta' id='citta' />");
+				echo ("Cosa stai cercando?<input type='text' value='$ricerca' name='ricerca' id='ricerca'/><br/>");
+				echo ("<input type='submit' value='Aggiorna tabella'/>");
+			echo ("</form>");
 			echo ("</div>);
 		?>
 	</body>
