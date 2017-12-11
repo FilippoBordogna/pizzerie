@@ -17,7 +17,7 @@
 		</script>
 	</head>
 	<body>
-		<? php 
+		<?php 
 			
 			$nelementi=10;
 			$citta="Bergamo";
@@ -48,12 +48,12 @@
 		    // DECODIFICO LA RISPOSTA IN JSON SALAVANDOLA NELLA VARIABILE $risposta
 			$risposta = json_decode($risposta_json);
 			# Stampa della tabella delle pizzerie.
-			
-				echo ("<tr>");
+				echo "<table>";
+				echo "<tr>";
 					echo ("<th>NOME (".$ricerca.")</th>");
 					echo ("<th>LATITUDINE</th>");
 					echo ("<th>LONGITUDINE</th>");
-				echo ("</tr>");
+				echo "</tr>";
 				for($i=0; $i<$nelementi; $i++)
 				{
 					echo ("<tr>");
@@ -69,20 +69,19 @@
 					echo ("</tr>");
 				}
 			echo ("</table>");
-			echo ("</div>");
+			
 			//SE CI SONO ERRORI (SPERO DI NO) LI STAMPO
 			echo curl_error($chiamata);
 			//CHIUDO IL CURL
 			curl_close($chiamata);
 			
-			echo ("<form id='forma' method='post'><br/>");
-				echo ("INSERIMENTO DATI\n");
-				echo ("Seleziona il numero elementi:<input type='text' value='$nelementi' name='nelementi'id='nelementi'/>");
-				echo ("Citta:<input type='text' value='$citta' name='citta' id='citta' />");
-				echo ("Cosa stai cercando?<input type='text' value='$ricerca' name='ricerca' id='ricerca'/><br/>");
-				echo ("<input type='submit' value='Aggiorna tabella'/>");
-			echo ("</form>");
-			echo ("</div>);
+			echo "<form id='forma' method='post'><br/>";
+				echo "INSERIMENTO DATI\n";
+				echo "Seleziona il numero elementi:<input type='text' value='$nelementi' name='nelementi'id='nelementi'/>";
+				echo "Citta:<input type='text' value='$citta' name='citta' id='citta' />";
+				echo "Cosa stai cercando?<input type='text' value='$ricerca' name='ricerca' id='ricerca'/><br/>";
+				echo "<input type='submit' value='Aggiorna tabella'/>";
+			echo "</form>"
 		?>
 	</body>
 </html>
