@@ -49,11 +49,11 @@
 			$risposta = json_decode($risposta_json);
 			# Stampa della tabella delle pizzerie.
 			echo ("<div align='center'>");
-			echo ("<table align='center' style='border:3px solid black;'>");
+			echo ("<table align='center'>");
 				echo "<tr>";
-					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;>NOME (".$ricerca.")</th>");
-					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;>LATITUDINE</th>");
-					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;>LONGITUDINE</th>");
+					echo ("<th>NOME (".$ricerca.")</th>");
+					echo ("<th>LATITUDINE</th>");
+					echo ("<th>LONGITUDINE</th>");
 				echo "</tr>";
 				for($i=0; $i<$nelementi; $i++)
 				{
@@ -79,10 +79,11 @@
 			echo "<div style:'text-align:center; border: solid 2px black;'>";
 			echo "<form id='forma' method='post' /*onsubmit='return controllo_campi();'*/><br/>";
 			echo "<h1 style='font-family:courier; font-weight:bold; color:red;'>INSERIMENTO DATI\n</h1>";
-			echo "<p>Seleziona il numero elementi:</td><td><input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi' /></p>";
-			echo "<p>Citta: </td><td><input type='text' placeholder='Bergamo, Milano, etc' value='$citta' name='citta' id='citta' /></p>";
-			echo "<p>Cosa stai cercando?</td><td><input type='text' placeholder='Ristorante, Pizzeria, Bar' value='$ricerca' name='ricerca' id='ricerca' /></p><br/>";
-			echo " <input type='submit' value='Aggiorna tabella' />";
+			echo "<p>Seleziona il numero elementi:<input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi' /></p>";
+			echo "<p>Citta:<input type='text' placeholder='Bergamo, Milano, etc' value='$citta' name='citta' id='citta' /></p>";
+			echo "</form>";
+			echo "<p>Cosa stai cercando?<input type='text' placeholder='Ristorante, Pizzeria, Bar' value='$ricerca' name='ricerca' id='ricerca' /></p><br/>";
+			echo "<input type='submit' value='Aggiorna tabella'/>";
 			echo ("</div>);
 		?>
 	</body>
