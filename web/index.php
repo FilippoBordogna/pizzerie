@@ -49,7 +49,7 @@
 			
 		    // DECODIFICO LA RISPOSTA IN JSON SALAVANDOLA NELLA VARIABILE $risposta
 			$risposta = json_decode($risposta_json);
-				echo "<h1 style='color:red; font-family:courier; font-weight:bold;'>RISULTATI:</h1>";
+				echo "<h1 align='center' style='color:red; font-family:courier; font-weight:bold;'>RISULTATI:</h1>";
 				echo "<table align='center' style='border:3px solid black'>";
 				echo "<tr>";
 					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;'>NOME (".$ricerca.")</th>");
@@ -70,7 +70,7 @@
 						echo ("</td>");
 					echo ("</tr>");
 				}
-			echo ("</table>");
+			echo ("</table><br/>");
 			
 			//SE CI SONO ERRORI (SPERO DI NO) LI STAMPO
 			echo curl_error($chiamata);
