@@ -17,6 +17,30 @@
 				return esito;
 			}
 		</script>
+		<style>
+			.btn
+			{
+			  -webkit-border-radius: 15;
+			  -moz-border-radius: 15;
+			  border-radius: 15px;
+			  -webkit-box-shadow: 3px 2px 0px #666666;
+			  -moz-box-shadow: 3px 2px 0px #666666;
+			  box-shadow: 3px 2px 0px #666666;
+			  font-family: Courier New;
+			  color: #ffffff;
+			  font-size: 25px;
+			  padding: 5px;
+			  background: #2ef545;
+			  border: solid #050505 2px;
+			  text-decoration: none;
+			}
+
+			.btn:hover 
+			{
+			  background: #000000;
+			  text-decoration: none;
+			}
+		</style>
 	</head>
 	<body>
 		<?php 
@@ -83,7 +107,7 @@
 				echo "<p>Seleziona il numero elementi: <input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi'/></p>";
 				echo "<p>Citta: <input type='text' placeholder='Bergamo, Milano, etc'value='$citta' name='citta' id='citta'/></p>";
 				echo "<p>Cosa stai cercando? <input type='text' placeholder='Ristorante, Pizzeria, etc' value='$ricerca' name='ricerca' id='ricerca'/></p>";
-				echo "<input type='submit' value='Aggiorna tabella'/>";
+				echo "<input type='submit'class='btn' value='Aggiorna tabella'/>";
 			echo "</form>";
 			echo "</div>";
 		?>
