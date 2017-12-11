@@ -77,13 +77,15 @@
 			//CHIUDO IL CURL
 			curl_close($chiamata);
 			
+			echo "<div align='center'>";
 			echo "<form id='forma' method='post' onsubmit='controllo_campi()'><br/>";
 				echo "INSERIMENTO DATI\n";
 				echo "<p>Seleziona il numero elementi: <input type='number' placeholder='1-50' step='1' min='1' max='50' value='$nelementi' name='nelementi'id='nelementi'/></p>";
 				echo "<p>Citta: <input type='text' placeholder='Bergamo, Milano, etc'value='$citta' name='citta' id='citta'/></p>";
 				echo "<p>Cosa stai cercando? <input type='text' placeholder='Ristorante, Pizzeria, etc' value='$ricerca' name='ricerca' id='ricerca'/></p>";
 				echo "<input type='submit' value='Aggiorna tabella'/>";
-			echo "</form>"
+			echo "</form>";
+			echo "</div>";
 		?>
 	</body>
 </html>
