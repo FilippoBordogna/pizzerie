@@ -12,6 +12,8 @@
 				if(n!=""&&c!=""&&document.getElementById("ricerca").value!="")
 					if(parseInt(n)<51)
 						esito=true;
+				if(!esito)
+					echo ("alert('Errore nell'inserimento:\n I campi NON possono essere vuoti\n');");
 				return esito;
 			}
 		</script>
@@ -48,11 +50,11 @@
 		    // DECODIFICO LA RISPOSTA IN JSON SALAVANDOLA NELLA VARIABILE $risposta
 			$risposta = json_decode($risposta_json);
 			# Stampa della tabella delle pizzerie.
-				echo "<table>";
+				echo "<table align='center' style='border:3px solid black'>";
 				echo "<tr>";
-					echo ("<th>NOME (".$ricerca.")</th>");
-					echo ("<th>LATITUDINE</th>");
-					echo ("<th>LONGITUDINE</th>");
+					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;'>NOME (".$ricerca.")</th>");
+					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;'>LATITUDINE</th>");
+					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;'>LONGITUDINE</th>");
 				echo "</tr>";
 				for($i=0; $i<$nelementi; $i++)
 				{
