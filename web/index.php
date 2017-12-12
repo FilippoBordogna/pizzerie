@@ -64,6 +64,11 @@
 				$ricerca=$_POST["ricerca"];
 			}
 			
+			//GESTIONE SPAZI
+			for($i=0; $i<strlen($citta); $i++)
+				if($citta[$i]==' ')
+					$citta[$i]='+';
+			
 			// COMPONGO LA QUERY
 			$query="https://api.foursquare.com/v2/venues/search?v=20161016&query=$ricerca&limit=$nelementi&intent=checkin&client_id=DX23CQQLWTKIJEUORT3J1JYU3GGFZXJ4Y0RUN42XQZEMJIVR&client_secret=UPVWDC02URK4SOWO4WF4YBBTNZKTON1WVBVSF5BVHSSRTAG3&near=$citta";
 			$chiamata = curl_init() or die(curl_error());
@@ -80,6 +85,10 @@
 					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;'>LATITUDINE</th>");
 					echo ("<th style='border: 2px solid black; background-color: #FF0000;color: white;'>LONGITUDINE</th>");
 				echo "</tr>";
+		
+				if (count($risposta->response->venues)<$nelementi);
+					$nelementi=count($risposta->response->venues);		
+		
 				for($i=0; $i<$nelementi; $i++)
 				{
 					echo ("<tr>");
